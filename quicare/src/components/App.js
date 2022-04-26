@@ -2,6 +2,8 @@ import Home from './Home';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import {BrowserRouter as Router,Route,Switch,Link} from 'react-router-dom';
+import ViewAll from './ViewAll';
+import Product from './Product';
 const App=()=>{
     return(
         <>
@@ -12,7 +14,12 @@ const App=()=>{
         </center>
       <Switch>
         <Route exact path="/">
-          <Home/>
+          {/* <Home/> */}
+          {/* <ViewAll/> */}
+          <Product/>
+        </Route>
+        <Route exact path="/other-page">
+            <Product/>
         </Route>
         <Route exact path="/about">
           <Footer/>
