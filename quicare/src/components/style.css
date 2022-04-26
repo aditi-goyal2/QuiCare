@@ -1,0 +1,45 @@
+@import url('http://fonts.cdnfonts.com/css/lilly');
+.unique{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 50px;
+padding-top: 30px;
+}
+h1{
+font-family: 'Lilly', sans-serif;
+font-size: 50px;
+}
+.gen input{
+height: 55px;
+width: 250px;
+font-size: 20px;
+padding-left: 5px;
+margin:2px;
+}
+button{
+position: relative;
+height: 55px;
+width: 120px;
+padding:5px;
+font-size: 18px;
+border: none;
+margin:2px;
+color: whitesmoke;
+background-color: forestgreen;
+border-radius: 3px;
+cursor: pointer;
+
+}
+button:active{
+box-shadow: none;
+}
+
+
+.beautify{
+    display:inline-block;
+    margin:20px;
+    border:2px solid black;
+    padding :10px;
+}

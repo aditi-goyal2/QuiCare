@@ -1,34 +1,41 @@
 import Home from './Home';
 import Navbar from './Navbar';
+import { useState } from 'react';
 import Footer from './Footer';
-import {BrowserRouter as Router,Route,Switch,Link} from 'react-router-dom';
+import ReactDOM from "react-dom/client";
+import {BrowserRouter,Route,Routes,Switch,Link} from 'react-router-dom';
+import QrCode from './QrCode';
+import Login from './Login';
+import Alert from 'react-bootstrap/Alert'
 import ViewAll from './ViewAll';
 import Product from './Product';
 const App=()=>{
+    const [isLogged,setIsLogged]=useState(0);
     return(
-        <>
-    <Router>
+    <BrowserRouter>
     <div className="App">
      <center>
-        <Navbar/>
-        </center>
-      <Switch>
-        <Route exact path="/">
-          {/* <Home/> */}
-          {/* <ViewAll/> */}
-          <Product/>
+        <Navbar isLogged={isLogged} setIsLogged={setIsLogged}/>
+    </center>
+      <Routes>
+        <Route exact path='/' element={ <Home/>}>
         </Route>
-        <Route exact path="/other-page">
-            <Product/>
+        <Route exact path='/order' element={ <ViewAll/>}>
         </Route>
-        <Route exact path="/about">
-          <Footer/>
+        
+        <Route exact path='/bigView' element={ <Product/>}>
         </Route>
-      </Switch>
+        <Route exact path='g-qr' element={<QrCode isLogged={isLogged} setIsLogged={setIsLogged} />}>
+        </Route>
+        <Route exact path='login' element={<Login isLogged={isLogged} setIsLogged={setIsLogged}/> }> </Route>
+      </Routes>
+      
     </div>
-    </Router>
-    </>
+    </BrowserRouter>
+    
+  
         
     );
 }
 export default App;
+

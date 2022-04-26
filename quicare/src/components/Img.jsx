@@ -15,16 +15,9 @@ const Img = ({sc,imid,imdes,use,indi,tit}) => {
                 <Card.Text>
                  {imdes}
                 </Card.Text>
-                <Button variant="primary" onClick={
-                  // this.props.router.push({
-                  //   pathname: '/other-page',
-                  //   state: {
-                  //     id: 7,
-                  //     color: 'green'
-                  //   }
-                  console.log("dk")
-                  }
-                >Show details</Button>
+                <Link to="/bigView">
+                <Button variant="primary" >
+                Show details</Button></Link>
               </Card.Body>
             </Card>
         </div>

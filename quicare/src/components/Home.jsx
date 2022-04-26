@@ -14,7 +14,7 @@ const Home = () => {
               <img src="2.png" className="image"/>
               <img src="3.png" className="image"/>
               </div>
-                {/* <ViewAll/> */}
+            
             <Footer/>
        
       </div>
