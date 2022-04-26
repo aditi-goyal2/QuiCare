@@ -41,7 +41,7 @@ const Navbar = ({isLogged,setIsLogged}) => {
                         </li>
                         
                         <li className="nav-item pe-4">
-                            <Link to="/history" className="nav-link fs-5 fw-bold color">
+                            <Link to="/order" className="nav-link fs-5 fw-bold color">
                                Orders
                             </Link>
                         </li>

@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import './App.css';
+import ViewAll from "./ViewAll";
 
 // import { Container } from '@mui/material';
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
               <img src="3.png" className="image"/>
               </div>
             
-            
+            <Footer/>
        
       </div>
      );

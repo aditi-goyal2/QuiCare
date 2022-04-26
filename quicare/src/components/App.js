@@ -7,6 +7,8 @@ import {BrowserRouter,Route,Routes,Switch,Link} from 'react-router-dom';
 import QrCode from './QrCode';
 import Login from './Login';
 import Alert from 'react-bootstrap/Alert'
+import ViewAll from './ViewAll';
+import Product from './Product';
 const App=()=>{
     const [isLogged,setIsLogged]=useState(0);
     return(
@@ -18,11 +20,16 @@ const App=()=>{
       <Routes>
         <Route exact path='/' element={ <Home/>}>
         </Route>
+        <Route exact path='/order' element={ <ViewAll/>}>
+        </Route>
+        
+        <Route exact path='/bigView' element={ <Product/>}>
+        </Route>
         <Route exact path='g-qr' element={<QrCode isLogged={isLogged} setIsLogged={setIsLogged} />}>
         </Route>
         <Route exact path='login' element={<Login isLogged={isLogged} setIsLogged={setIsLogged}/> }> </Route>
       </Routes>
-      <Footer/>
+      
     </div>
     </BrowserRouter>
     

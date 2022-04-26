@@ -2,6 +2,7 @@ import { useState,useEffect } from "react";
 import './style.css'
 
 import GenerateQr from "./GenerateQr";
+import Footer from "./Footer";
 const QrCode=()=>{
   const [temp, setTemp] = useState("");
   const [word, setWord] = useState("");
@@ -13,6 +14,7 @@ const QrCode=()=>{
   }
   
      return (
+       <div>
        <div className="unique">
       <div className="input-box">
       <div className="gen">
@@ -32,6 +34,8 @@ const QrCode=()=>{
             </div>
             </div> : null
       }
+      </div>
+      <Footer style={{"marginBottom":"50px"}}/>
         </div>
      );
   
