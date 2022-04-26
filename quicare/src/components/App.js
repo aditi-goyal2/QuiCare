@@ -1,26 +1,28 @@
 import Home from './Home';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import {BrowserRouter as Router,Route,Switch,Link} from 'react-router-dom';
+import ReactDOM from "react-dom/client";
+import {BrowserRouter,Route,Routes,Switch,Link} from 'react-router-dom';
+import QrCode from './QrCode';
 const App=()=>{
     return(
-        <>
-    <Router>
+        
+    <BrowserRouter>
     <div className="App">
      <center>
         <Navbar/>
-        </center>
-      <Switch>
-        <Route exact path="/">
-          <Home/>
+    </center>
+      <Routes>
+        <Route exact path='/' element={ <Home/>}>
+         
         </Route>
-        <Route exact path="/about">
-          <Footer/>
+        <Route exact path='g-qr' element={<QrCode/>}>
         </Route>
-      </Switch>
+      </Routes>
     </div>
-    </Router>
-    </>
+    </BrowserRouter>
+    
+  
         
     );
 }

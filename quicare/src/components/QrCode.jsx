@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react";
+import './style.css'
 import GenerateQr from "./GenerateQr";
 const QrCode=()=>{
   const [temp, setTemp] = useState("");
@@ -11,7 +12,7 @@ const QrCode=()=>{
   }
   
      return (
-       <div className="App">
+       <div className="unique">
       <div className="input-box">
       <div className="gen">
         <input type="number" onChange={(e)=>{setValue(e.target.value)}} placeholder="No. of required QR"/>

@@ -1,5 +1,5 @@
 import QRCode from "qrcode.react";
-
+import './style.css'
 const GenerateQr=(props)=>{
     const {txt,num}=props;
     

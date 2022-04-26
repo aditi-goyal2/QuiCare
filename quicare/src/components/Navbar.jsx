@@ -35,7 +35,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="nav-item pe-4">
-                            <Link to="/" className="nav-link fs-5 fw-bold color">
+                            <Link to="/g-qr" className="nav-link fs-5 fw-bold color">
                             About
                             </Link>
                         </li>
