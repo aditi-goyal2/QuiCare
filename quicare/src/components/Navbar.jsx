@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './nav.css';
-const Navbar = () => {
+const Navbar = ({isLogged,setIsLogged}) => {
     
     return (
         <nav className="navbar navbar-expand-md navbar-light nav shadow-sm navBar">
@@ -35,8 +35,8 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="nav-item pe-4">
-                            <Link to="/g-qr" className="nav-link fs-5 fw-bold color">
-                            About
+                            <Link to={isLogged?"/g-qr":"/"} className="nav-link fs-5 fw-bold color">
+                            G-QrCode 
                             </Link>
                         </li>
                         
@@ -46,9 +46,8 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="nav-item pe-4">
-                            <Link to="/wishlist" className="nav-link fs-5 fw-bold color">
+                            <Link to="/login" className="nav-link fs-5 fw-bold color">
                                 Login
-                                
                             </Link>
                         </li>
                        

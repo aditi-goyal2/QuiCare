@@ -14,7 +14,7 @@ const Home = () => {
               <img src="3.png" className="image"/>
               </div>
             
-            <Footer/>
+            
        
       </div>
      );

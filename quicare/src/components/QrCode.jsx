@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import './style.css'
+
 import GenerateQr from "./GenerateQr";
 const QrCode=()=>{
   const [temp, setTemp] = useState("");
