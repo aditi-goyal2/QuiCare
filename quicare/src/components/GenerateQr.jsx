@@ -1,4 +1,5 @@
 import QRCode from "qrcode.react";
+import Footer from "./Footer";
 import './style.css'
 const GenerateQr=(props)=>{
     const {txt,num}=props;
@@ -30,6 +31,7 @@ const GenerateQr=(props)=>{
               Download QR Code
               </button>
               </div>
+              <Footer/>
             </div>)
     }
     return list;
