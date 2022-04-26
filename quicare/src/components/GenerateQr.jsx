@@ -25,9 +25,11 @@ const GenerateQr=(props)=>{
        console.log(p);
         list.push(<div className="beautify">
             <QRCode id="qr-gen" value={p} />
-            {/* <button type="button" onClick={downloadQRCode()}>
+            <div>
+            <button type="button" onClick={downloadQRCode}>
               Download QR Code
-              </button> */}
+              </button>
+              </div>
             </div>)
     }
     return list;
