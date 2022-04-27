@@ -31,7 +31,7 @@ const GenerateQr=(props)=>{
               Download QR Code
               </button>
               </div>
-              <Footer/>
+              
             </div>)
     }
     return list;
